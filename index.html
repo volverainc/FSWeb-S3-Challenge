@@ -4,9 +4,9 @@
 
 <head>
 	<meta charset="utf-8">
-
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Sprint Challenge - Anasayfa</title>
-
+	<link href="/css/index.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Roboto|Rubik" rel="stylesheet">
 	<script src="https://kit.fontawesome.com/5b12ffad4b.js" crossorigin="anonymous"></script>
 </head>
@@ -15,39 +15,48 @@
 	<div>
 		<!-- header -->
 		<header>
-			<div>
-				ERGİNEER BAR VE MANGAL
+			<div class="main-header">
+                <a href="index.html"><h1>ERGİNEER BAR VE MANGAL</h1></a>
 
 				<!-- nav -->
-				Menü
-				Rezervasyonlar
-				Özel Teklifler
-				İletişim
+				<nav>
+				<a href="menu.html">Menü</a>
+				<a href="#">Rezervasyonlar</a>
+				<a href="#">Özel Teklifler</a>
+				<a href="#">İletişim</a>
+				</nav>
+
+				<div class="socials">
+					<a href="#"><i class="fa-brands fa-square-facebook fa-2xl"></i></a>
+					<a href="#"><i class="fa-brands fa-square-twitter fa-2xl"></i></a>
+					<a href="#"><i class="fa-brands fa-square-instagram fa-2xl"></i></a>
+				</div>
+
 			</div>
 		</header>
 
 		<!-- gallery section -->
 		<section class="gallery">
-			<div>
-				<h2>YEMEKLERİMİZ</h2>
+			<h2>YEMEKLERİMİZ</h2>
+			<div class="gallery-grid">
 
-				img/food-avocadotoast.jpg
+				<img src="img/food-avocadotoast.jpg">
 
-				img/food-burger.jpg
+				<img src="img/food-burger.jpg">
 
-				img/food-poutine.jpg
+				<img src="img/food-poutine.jpg">
 
-				img/food-ribs.jpg
+				<img src="img/food-ribs.jpg">
 
-				img/food-sandwich.jpg
+				<img src="img/food-sandwich.jpg">
 
-				img/food-sausage.jpg
+				<img src="img/food-sausage.jpg">
 
-				img/food-steak.jpg
+				<img src="img/food-steak.jpg">
 
-				img/food-tacos.jpg
+				<img src="img/food-tacos.jpg">
 
-				img/food-wings.jpg
+				<img src="img/food-wings.jpg">
 			</div>
 		</section>
 
@@ -59,8 +68,8 @@
 			<div class="about-container">
 				<h2>HAKKIMIZDA</h2>
 
-				<div id="cooks" class="pic">
-				</div>
+				<!-- <div id="cooks" class="pic">
+				</div> -->
 
 				<div class="text">
 					<h3>Güzel Yemekler, Güzel İnsanlar</h3>
@@ -73,8 +82,8 @@
 						shankle duis chicken dolore andouille do tenderloin qui.</p>
 				</div>
 
-				<div id="bartender" class="pic">
-				</div>
+				<!-- <div id="bartender" class="pic">
+				</div> -->
 			</div>
 		</section>
 
@@ -111,7 +120,7 @@
 						<h3>İletişim</h3>
 
 						<div>
-							<a id="phone" href="tel:999-999-9999">999-999-9999</a>
+							<a id="phone" href="tel:999-999-9999">999-999-9999</a> <br>
 							<a id="email" href="mailto:restoran@boomer.com">restoran@ergineer.com</a>
 						</div>
 					</div>
@@ -125,15 +134,21 @@
 		<!-- footer -->
 		<footer>
 			<!-- email signup -->
-			Mail listemize katılın!
-			Üye Ol
+			<div class="email-signup">
+                <p>Mail listemize katılın!</p>
+                <input type="text" placeholder="E-posta Adresi" name="email">
+                <button>Üye Ol</button>
+            </div>
 			<!-- nav -->
-			Menü
-			Rezervasyonlar
-			Özel Teklifler
-			İletişim
+			<div class="nav">
+			<nav>
+			<a href="menu.html">Menü</a>
+			<a href="#">Rezervasyonlar</a>
+			<a href="#">Özel Teklifler</a>
+			<a href="#">İletişim</a>
+			</nav>
 			<!-- copyright -->
-			©2022 ERGİNEER Restoran Zinciri, Tüm hakları saklıdır.
+			<p class="copyright">©2022 ERGİNEER Restoran Zinciri, Tüm hakları saklıdır.</p></div>
 		</footer>
 	</div>
 </body>

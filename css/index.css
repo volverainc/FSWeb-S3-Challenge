@@ -30,6 +30,8 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+    margin: 0;
+    padding: 0;
 }
 ol, ul {
 	list-style: none;
@@ -93,6 +95,43 @@ header {
     background-repeat: no-repeat;
 }
 
+header a h1 {
+    font-size: 3em;
+    font-weight: bold;
+    color: white;
+    padding-bottom: 20px;
+}
+
+.main-header {
+    max-height: 600px;
+    background-color: #000000a3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header nav {
+    display: flex;
+    width: 100vh;
+    justify-content: space-between;
+}
+
+header nav a {color:white}
+
+header h1 {font-size: 6em;font-weight: bold;}
+
+header {color:white}
+
+.socials {    display: flex;
+    width: 300px;
+    padding: 30px;
+    justify-content: space-between;}
+
+.socials a {
+    font-size: 2.3em;
+    color: #e8f8e1
+}
+
 /* spacers */
 .spacer {
     width: 100%;
@@ -108,9 +147,28 @@ header {
 /* gallery section */
 .gallery {
     width: 100%;
-    height: 100vh;
     text-align: center;
     background-color: rgb(0, 4, 17);
+}
+
+.gallery h2 {
+    color: white;
+    padding: 30px
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    text-align: center;
+    justify-items: center;
+    padding: 0 100px;
+}
+
+.gallery-grid img {
+    width: 100%;
 }
 
 /* about us section */
@@ -131,14 +189,20 @@ header {
     justify-content: center;
     align-items: center;
     background-color: rgb(0, 4, 17, .8);
+    color: white;
 }
 
 .about h2 {
     width: 100%;
+    margin-top: -70px;
+}
+
+.about p {
+    font-size: 2em
 }
 
 .about-container .text {
-    width: 50%;
+    width: 60%;
 }
 
 /* contact us section */
@@ -149,6 +213,7 @@ header {
     background-position: center;
     background-repeat: no-repeat;
     background-color: rgb(0, 4, 17);
+    color: white;
 }
 
 .contact-container {
@@ -169,6 +234,10 @@ header {
     padding: .5vh 0;
 }
 
+.contact a {
+    color: white
+}
+
 .info {
     width: 100%;
     display: flex;
@@ -178,6 +247,8 @@ header {
 .address {
     width: 25%;
 }
+
+.contact p,a {font-size: 1.7em}
 
 .hours {
     width: 25%;
@@ -191,21 +262,73 @@ header {
 /* footer section */
 footer {
     width: 100%;
-    height: 15vh;
     padding-top: 2.5vh;
     font-size: 3rem;
+    background: black;
+    color: white;
+    display: flex;
+    justify-content: space-around;
 }
+
+footer nav a {
+    color: white;
+    font-size: 1em
+}
+
+footer nav {
+        display: flex;
+    justify-content: space-between;
+}
+
+.copyright {
+    font-size: .6em;
+    text-align: center;
+    padding: 25px;
+}
+
+.nav {width: 50%}
+
+.email-signup {text-align:center}
 
 /* mobile media query */
 @media (max-width: 428px) {
     /* header section */
-    
+    header a h1 {
+        font-size: 1.6em;
+        font-weight: bold;
+        color: white;
+        padding-bottom: 20px;
+    }
+
+    header nav {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: center;
+        align-items: center;
+    }
 
     /* gallery section */
     .gallery {
         height: auto;
     }
-    
+
+    .gallery-grid {
+        display: flex;
+        text-align: center;
+        justify-items: center;
+        padding: 20px;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .gallery h2 {
+        color: white;
+        padding: 30px;
+        font-size: 3rem;
+    }
     /* about us section */
 
     .about {
@@ -216,10 +339,16 @@ footer {
         width: 100%;
         padding-top: 5vh;
     }
+
+    .about h3 {
+        font-size: 4rem
+    }
     
     .about-container .text {
         width: 85%;
     }
+
+
     
     /* contact us section */
     .contact h3 {
@@ -249,5 +378,23 @@ footer {
         height: auto;
         padding-top: 2.5vh;
         font-size: 2rem;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: center;
+        align-items: center;
     }
+
+    footer nav {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    .email-signup {
+        padding-bottom: 20px;
+    }
+
+    button {width: 100%;}
+    input {width: 100%;}
 }
